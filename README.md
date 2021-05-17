@@ -1,2 +1,2 @@
 # DGUlikelion 4th session
-# ~ create & read
+# from 3rd session ~ create & read
