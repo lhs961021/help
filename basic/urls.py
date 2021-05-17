@@ -22,4 +22,8 @@ urlpatterns = [
     path('', views.showmain, name="showmain"),
     path('first/', views.first, name="first"),
     path('second/', views.second, name="second"),
+    path('<str:id>', views.detail, name="detail"),
+    path('new/', views.new, name="new"),
+    path('create/', views.create, name="create"),
+
 ]

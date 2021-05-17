@@ -7,4 +7,22 @@
 <a href="{% url 'first' %}">first</a>
 <a href="{% url 'second' %}">second</a>
 <img src="{%static 'images/image01.jpg' %}">
+
+<h2><a href="{%url 'new'%}">글쓰기</a></h2>
+
+<h1>글 목록</h1>
+
+<div>
+    {% for blog in blogs %}
+    <div>
+        <h3>{{blog.title}}</h3>
+        {{blog.writer}}<br>
+        {{blog.summary}}
+        <a href="{%url 'detail' blog.id%}">...more</a>
+        <br><hr>
+    </div>
+    {%endfor%}
+</div>
+
+
 {% endblock %}
