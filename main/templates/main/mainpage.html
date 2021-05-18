@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block content %}
-<h1>2021 Dongguk Likelion 3rd session</h1>
+<h1>2021 Dongguk Likelion session</h1>
 
-<a href="{% url 'first' %}">first</a>
-<a href="{% url 'second' %}">second</a>
 <img src="{%static 'images/image01.jpg' %}">
+<a href="{% url 'main:first' %}">first</a>
+<a href="{% url 'main:second' %}">second</a>
 
-<h2><a href="{%url 'new'%}">글쓰기</a></h2>
+<h2><a href="{%url 'main:new'%}">글쓰기</a></h2>
 
 <h1>글 목록</h1>
 
@@ -18,7 +18,7 @@
         <h3>{{blog.title}}</h3>
         {{blog.writer}}<br>
         {{blog.summary}}
-        <a href="{%url 'detail' blog.id%}">...more</a>
+        <a href="{%url 'main:detail' blog.id%}">...more</a>
         <br><hr>
     </div>
     {%endfor%}
