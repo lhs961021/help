@@ -5,8 +5,11 @@ from django.utils import timezone
 # Create your views here.
 
 def showmain(request):
+    return render(request, 'main/mainpage.html')
+
+def posts(reuqest):
     blogs = Blog.objects.all()
-    return render(request, 'main/mainpage.html', {'blogs':blogs})
+    return render(reuqest, 'main/posts.html', {'blogs': blogs})
 
 def first(request):
     return render(request, 'main/first.html')
@@ -28,4 +31,4 @@ def create(request):
     new_blog.pub_date = timezone.now()
     new_blog.body = request.POST['body']
     new_blog.save()
-    return redirect('detail',new_blog.id)
+    return redirect('main:detail', new_blog.id)

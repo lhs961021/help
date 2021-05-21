@@ -8,21 +8,4 @@
 <a href="{% url 'main:first' %}">first</a>
 <a href="{% url 'main:second' %}">second</a>
 
-<h2><a href="{%url 'main:new'%}">글쓰기</a></h2>
-
-<h1>글 목록</h1>
-
-<div>
-    {% for blog in blogs %}
-    <div>
-        <h3>{{blog.title}}</h3>
-        {{blog.writer}}<br>
-        {{blog.summary}}
-        <a href="{%url 'main:detail' blog.id%}">...more</a>
-        <br><hr>
-    </div>
-    {%endfor%}
-</div>
-
-
 {% endblock %}

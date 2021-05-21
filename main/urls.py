@@ -9,4 +9,5 @@ urlpatterns = [
     path('<str:id>', detail, name="detail"),
     path('new/', new, name="new"),
     path('create/', create, name="create"),
+    path('posts/', posts, name="posts"),
 ]

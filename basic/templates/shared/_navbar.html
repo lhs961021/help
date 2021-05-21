@@ -14,10 +14,8 @@
             게시물
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">전체 글 보기</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="{% url 'main:posts' %}">전체 글 보기</a></li>
+            <li><a class="dropdown-item" href="{%url 'main:new'%}">글 작성하기</a></li>
           </ul>
         </li>
       </ul>
