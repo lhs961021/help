@@ -7,9 +7,9 @@ from django.utils import timezone
 def showmain(request):
     return render(request, 'main/mainpage.html')
 
-def posts(reuqest):
+def posts(request):
     blogs = Blog.objects.all()
-    return render(reuqest, 'main/posts.html', {'blogs': blogs})
+    return render(request, 'main/posts.html', {'blogs': blogs})
 
 def first(request):
     return render(request, 'main/first.html')
