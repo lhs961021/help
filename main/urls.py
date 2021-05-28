@@ -10,4 +10,7 @@ urlpatterns = [
     path('new/', new, name="new"),
     path('create/', create, name="create"),
     path('posts/', posts, name="posts"),
+    path('edit/<str:id>', edit, name="edit"),
+    path('update/<str:id>', update, name="update"),
+    path('delete/<str:id>', delete, name="delete"),
 ]
